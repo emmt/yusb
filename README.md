@@ -9,6 +9,7 @@ Installation
 
 In short, building and installing the plug-in can be as quick as:
 ````
+$ mkdir -p $BUILD_DIR
 $ cd $BUILD_DIR
 $ $SRC_DIR/configure
 $ make
@@ -24,9 +25,10 @@ Then, to use the plug-in in Yorick:
 $ yorick
 > include "usb.i"
 ````
+
 More detailled explanations are given below.
 
-1. You must have Yorick and the USB library libusb-1.0 installed on your
+1. You must have Yorick and the USB library (libusb-1.0) installed on your
    machine.  (See the *"Links"* section below.)
 
 2. Unpack the plug-in code somewhere.
@@ -36,7 +38,7 @@ More detailled explanations are given below.
    For an **in-place build**, go to the source directory of the plug-in
    code and run the configuration script:
    ````
-   $ cd SRC_DIR
+   $ cd $SRC_DIR
    $ ./configure
    ````
    To see the configuration options, call:
@@ -79,4 +81,4 @@ Links
 -----
 
  * Yorick: <http://yorick.github.com/>;
- * LibUSB: <http://sourceforge.net/projects/libusb>
+ * USB library: <http://sourceforge.net/projects/libusb>
