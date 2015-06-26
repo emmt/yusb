@@ -526,7 +526,7 @@ static void* get_data(int iarg, long* the_size)
       size = 2*sizeof(double)*ntot;
       break;
     default:
-      y_error("dbad data type");
+      y_error("bad data type");
     }
   }
   if (the_size != NULL) {
