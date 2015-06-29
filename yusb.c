@@ -621,18 +621,23 @@ void Y_usb_control_transfer(int argc)
   if (length > offset) {
     ret = transfer(obj->handle, endpoint, data + offset,
                    length - offset, &transferred, timeout);
-    if (transferred_index >= 0L &&
-        (ret == 0 || ret == LIBUSB_ERROR_TIMEOUT)) {
-      /* Store total number of transferred bytes so far. */
-      ypush_int(transferred + offset);
-      yput_global(transferred_index, 0);
-    }
-    if (ret < 0 && yarg_subroutine()) {
-      failure(NULL, ret);
+    if (!(ret == 0 || (ret == LIBUSB_ERROR_TIMEOUT && transferred > 0))) {
+      /* No data has been transferred. */
+      transferred = 0;
+      if (yarg_subroutine()) {
+        /* Some error has occured. */
+        failure(NULL, ret);
+      }
     }
   } else {
     /* Nothing to do. */
+    transferred = 0;
     ret = 0;
+  }
+  if (transferred_index >= 0L) {
+    /* Store total number of transferred bytes so far. */
+    ypush_int(offset + transferred);
+    yput_global(transferred_index, 0);
   }
   ypush_int(ret);
 }
