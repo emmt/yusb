@@ -7,6 +7,14 @@ YUSB is a Yorick plug-in to implement USB control into Yorick.
 Installation
 ------------
 
+Prior to installation, make sure you have
+[USB library](http://sourceforge.net/projects/libusb) installed on your
+system with development files.  For instance, on a Debian (or Ubuntu) based
+system:
+````sh
+sudo apt-get install libusb-1.0-0-dev
+````
+
 In short, building and installing the plug-in can be as quick as:
 ````
 $ mkdir -p $BUILD_DIR
