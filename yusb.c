@@ -651,15 +651,3 @@ void Y_usb_interrupt_transfer(int argc)
 {
   do_transfer(argc, libusb_interrupt_transfer);
 }
-
-/*
- * Local Variables:
- * mode: C
- * c-basic-offset: 2
- * tab-width: 8
- * indent-tabs-mode: nil
- * fill-column: 78
- * coding: utf-8
- * ispell-local-dictionary: "american"
- * End:
- */
