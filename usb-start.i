@@ -1,0 +1,1 @@
+autoload, "usb.i", usb_probe_devices, usb_open_device, usb_get_string, usb_claim_interface, usb_release_interface, usb_control_transfer, usb_bulk_transfer, usb_interrupt_transfer, usb_error_name, usb_error_description, usb_error, usb_debug;

@@ -41,12 +41,12 @@ EXTRA_PKGS=$(Y_EXE_PKGS)
 PKG_CLEAN=
 
 # autoload file for this package, if any
-PKG_I_START=
+PKG_I_START=${srcdir}/usb-start.i
 # non-pkg.i include files for this package, if any
 PKG_I_EXTRA=
 
 RELEASE_FILES = AUTHORS LICENSE Makefile NEWS README.md \
-	configure usb.i yusb.c
+	configure usb.i usb-start.i yusb.c
 RELEASE_NAME = $(PKG_NAME)-$(RELEASE_VERSION).tar.bz2
 
 # -------------------------------- standard targets and rules (in Makepkg)
