@@ -6,28 +6,7 @@
  *-----------------------------------------------------------------------------
  *
  * Copyright (c) 2014 Éric Thiébaut <eric.thiebaut@univ-lyon1.fr>.
- *
- * The MIT License (MIT):
- *
- * Permission is hereby granted, free of charge, to any person obtaining a
- * copy of this software and associated documentation files (the "Software"),
- * to deal in the Software without restriction, including without limitation
- * the rights to use, copy, modify, merge, publish, distribute, sublicense,
- * and/or sell copies of the Software, and to permit persons to whom the
- * Software is furnished to do so, subject to the following conditions:
- *
- * The above copyright notice and this permission notice shall be included in
- * all copies or substantial portions of the Software.
- *
- * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
- * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
- * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
- * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
- * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
- * FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
- * DEALINGS IN THE SOFTWARE.
- *
- *-----------------------------------------------------------------------------
+ * All rights reserved.
  */
 
 if (is_func(plug_in)) plug_in, "yusb";
@@ -149,7 +128,7 @@ extern usb_control_transfer;
 /* DOCUMENT usb_control_transfer(dev, type, request, value,
                                  index, data, length, timeout);
 
-     Perform a USB control transfer.  The direction of the transfer is
+     Perform an USB control transfer.  The direction of the transfer is
      inferred from the request type field of the setup packet.
 
    ARGUMENTS:
@@ -189,7 +168,7 @@ extern usb_bulk_transfer;
          or usb_bulk_transfer(dev, endpoint, data, length,
                               transferred, timeout, offset);
 
-     Perform a USB bulk transfer.  The direction of the transfer is inferred
+     Perform an USB bulk transfer.  The direction of the transfer is inferred
      from the direction bits of the endpoint address.
 
      For bulk reads, the LENGTH parameter indicates the maximum length of data
@@ -249,7 +228,7 @@ extern usb_interrupt_transfer;
          or usb_interrupt_transfer(dev, endpoint, data, length,
                                    transferred, timeout, offset);
 
-     Perform a USB interrupt transfer.  The direction of the transfer is
+     Perform an USB interrupt transfer.  The direction of the transfer is
      inferred from the direction bits of the endpoint address.
 
      For interrupt reads, the LENGTH parameter indicates the maximum length of
@@ -332,7 +311,7 @@ extern usb_debug;
        0 : no messages ever printed by the library (LIBUSB_LOG_LEVEL_NONE)
        1 : error messages are printed to stderr (LIBUSB_LOG_LEVEL_ERROR)
        2 : warning and error messages are printed to stderr
-          (LIBUSB_LOG_LEVEL_WARNING)
+           (LIBUSB_LOG_LEVEL_WARNING)
        3 : informational messages are printed to stdout, warning and error
            messages are printed to stderr (LIBUSB_LOG_LEVEL_INFO)
        4 : debug and informational messages are printed to stdout, warnings
