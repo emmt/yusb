@@ -93,5 +93,5 @@ YUSB is open source sofware released under the MIT license.
 Links
 -----
 
- * Yorick: <http://yorick.github.com/>;
+ * Yorick: <http://github.com/LLNL/yorick/>;
  * USB library: <http://sourceforge.net/projects/libusb>
